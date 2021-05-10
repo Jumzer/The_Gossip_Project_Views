@@ -1,0 +1,12 @@
+<h1>Bienvenue !</h1>
+
+<p> Salut ! Ici c'est notre super site de potins, il est chouette, non ? </p>
+
+ <% @gossips.each do |gossip| %>
+    <p>
+      Le nom de l'auteur : <%= gossip.user.first_name %><br/>
+      Le titre du gossip : <%= gossip.title %> <br/>
+      </p>
+
+      <%= link_to "Lire", ("/gossip/#{gossip.id}") %>
+<% end %>
